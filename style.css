@@ -1,0 +1,135 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost',sans-serif;
+    background:linear-gradient(to bottom right,red,blue);
+   
+
+}
+.main{
+    margin:auto;
+    width: 350px;
+    height: 500px;
+    margin-top:20px;
+    background: red;
+    overflow: hidden;
+    background:url("monkey-d-luffy.jpg") no-repeat center /cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+
+
+
+ .main:hover{
+    transform:scale(1.1);
+    margin-top:50px;
+    transition: .5s ease-in-out;
+ }
+ .main:not(:hover){
+    transform:scale(1);
+    transition: .5s ease-in-out;
+ }
+ 
+
+#chk{
+    display: none;
+}
+
+.Signup{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+label{
+    color:white;
+    font-size:2.3em;
+    justify-content: center;
+    /* when display:flex is used the it automatic arranged in a row(by default) pr column  */
+    display: flex;
+    margin:60px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: .5s ease-in-out;
+}
+
+ input{
+    width:60%;
+    height: 20px;
+    background:white;
+    justify-content: center;
+    display: flex;
+    margin:20px auto;
+    padding:10px;
+    border:none;
+    outline: none;
+    border-radius:5px;
+}
+button{
+    width:60%;
+    height:40px;
+    margin:10px auto;
+    justify-content: center;
+    display:block;
+    color:#fff;
+    background:#573b8a;
+    font-size:1em;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
+    margin-top:20px;
+    outline: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background:#000;
+}
+
+.login{
+    /* Never use the background:#ffffff; when u want to add */
+    background:url("1.jpg") no-repeat center /cover;
+    height: 460px;
+    border-radius:60%/10%;
+    transform:translateY(-180px);
+    transition: .8s ease-in-out;
+ }
+
+.login label{
+    color:#77DCF2;
+    transform: scale(.6);
+}
+#chk:checked ~.login{
+    transform:translateY(-500px);
+    
+}
+#chk:checked ~ .login label{
+    transform:scale(1);
+}
+#chk:checked ~ .signup{
+    transform:scale(.6);
+} 
+
+ @media (max-width: 768px) {
+    .main {
+        max-width: 90%; /* Adjust the maximum width for smaller screens */
+    } 
+
+    input, button {
+        width: 60%; /* Make inputs and buttons full width on smaller screens */
+    }
+} 
+
+@media (max-width: 300px) {
+    .main {
+        max-width: 90%; /* Adjust the maximum width for smaller screens */
+    }
+
+    input, button {
+        width: 60%; /* Make inputs and buttons full width on smaller screens */
+    }
+}
